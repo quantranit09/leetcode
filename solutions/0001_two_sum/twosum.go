@@ -9,8 +9,6 @@ You may assume that each input would have exactly one solution, and you may not 
 
 You can return the answer in any order.
 
-
-
 Example 1:
 
 Input: nums = [2,7,11,15], target = 9
@@ -25,7 +23,6 @@ Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]
 
-
 Constraints:
 
 2 <= nums.length <= 104
@@ -33,7 +30,7 @@ Constraints:
 -109 <= target <= 109
 Only one valid answer exists.
 */
-func twoSum(nums []int, target int) []int {
+func TwoSum(nums []int, target int) []int {
 	for i := 0; i < len(nums)-1; i++ {
 		for j := i + 1; j < len(nums); j++ {
 			if (nums[i] + nums[j]) == target {
@@ -45,7 +42,7 @@ func twoSum(nums []int, target int) []int {
 	return []int{}
 }
 
-func twoSumEnhance(nums []int, target int) []int {
+func TwoSumEnhance(nums []int, target int) []int {
 	obj := map[int]int{}
 	firstNum := nums[0]
 	obj[firstNum] = 0
@@ -61,4 +58,3 @@ func twoSumEnhance(nums []int, target int) []int {
 
 	return []int{}
 }
-
